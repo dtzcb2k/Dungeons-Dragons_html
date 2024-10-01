@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    background-color: black;
+}
+
+.content{
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: burlywood;
+    /* 在此處添加 relative可以想成是作為被參照點*/
+    position: relative;
+}
+.word_board {
+    width: 800px;
+    height: 400px;
+    position: relative; /* 設置為絕對定位，這裡指的是在content之下的絕對定位 */
+    top: 50%; /* 將 .word_board 的上邊緣移動到 .content 的垂直中心 */
+    left: 50%; /* 將 .word_board 的左邊緣移動到 .content 的水平中心 */
+    transform: translate(-50%, -50%); /*將 .word_board 的中心移動到該位置 */
+    background-color: rgb(232, 209, 138);
+    text-align: left;
+    
+}
+
+.BDE{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    height: 200px;
+    width: 550px;
+    overflow-y: scroll;
+    text-align: left;
+    font-size: 16;
+    color: black;
+    /* background-color: rgb(249, 240, 177); */
+    /* transform: translate(-50%, -50%); */
+    z-index: 1;
+    padding: 5px;
+}
+.recond{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 400px;
+    width: 200px;
+    overflow-y: scroll;
+    text-align: left;
+    font-size: 16;
+    color: black;
+    /* background-color: rgb(255, 226, 177); */
+    z-index: 1;
+    padding: 5px;
+}
+
+button{
+    position: absolute;
+    bottom:0;
+    right: 0;
+    width: 100px;
+    height: 50px;
+    z-index: 2;
+}

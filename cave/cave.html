@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洞穴裡</title>
+    <link rel="stylesheet" href="cave.css">
+    <link rel="stylesheet" href="../system.css">
+    <script src="../system.js"></script>
+    <script src="../roll_dice.js"></script>
+    <script src="../Props.js"></script>
+    <script src="cave.js"></script>
+</head>
+<body onload="LoadData()">
+    <!-- 音樂研究中 -->
+    <audio id="bgm" autoplay loop>
+        <source src="../music/cave_music.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <div class="dice">
+            <img  id="roll_dice1" src="../picture/dice/d0.png"  alt="骰子">
+            <img  id="roll_dice2" src="../picture/dice/d0.png" alt="骰子">
+        </div>
+        <h1 id="h1" style="color: white;">黑暗洞穴</h1>
+        <div class="event">
+            <!-- <button onclick="Play_music()" style="position: absolute; top: 0;left: 0;background-color:black"><img id="sound" src="../picture/no_sound.png" style="position: absolute; top: 0;left: 0; width: 100px;height: 100px;"></button> -->
+            <img id="img" src="../picture/incave.jpg" style="height: 30%; width: 50%;" alt="洞穴">
+            <br>
+            <p>前方一片漆黑，安靜到聽的見水滴低落在地面的聲音</p>
+            <input id="button1" type ="button" class="inOut" onclick="Action()" value="繼續前進"></input>
+            <input id="button2" type ="button" class="inOut" onclick="javascript:location.href='../leave.html'" value="轉頭離開"></input>
+        </div>
+    </div>
+    <button onclick="Remove()" style="position: absolute;bottom: 0;right: 0;">清除站存</button>
+    <div class="recond" id="recond"></div>
+    <div class="properties">
+        <p id="Hp">Hp:</p>
+        <p id="Atk">Atk:</p>
+        <p id="Def">Def:</p>
+        <p id="more">more</p>
+        <div id="more_box" class="info_box"></div>
+    </div>
+    <div class="props" id="props">
+        <!-- <img src="../picture/props/bear.png" onclick="UseItem()" alt="道具圖案">
+        <div class="counter" id="counter">1</div> -->
+    </div>
+</body>
+</html>

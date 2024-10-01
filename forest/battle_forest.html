@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洞穴戰鬥</title>
+    <link rel="stylesheet" href="../system.css">
+    <link rel="stylesheet" href="forest.css">
+    
+    <script src="../system.js"></script>
+    <script src="../battle.js"></script>
+    <script src="../roll_dice.js"></script>
+    <!-- <script src="../Props.js"></script> -->
+    <script src="forest.js"></script>
+    <!-- 被引用的js要寫在前面，這樣才能調用 -->
+    
+</head>
+<body onload="Go_battle(2)">
+    <audio id="bgm" autoplay loop>
+        <source src="../music/battle.mp3" type="audio/mpeg">
+    </audio>
+    <div class="dice">
+        <img  id="roll_dice1" src=""  alt="骰子">
+        <img  id="roll_dice2" src="" alt="骰子">
+    </div>
+    <div class="container">
+        <h1 id="h1" style="color: white;"></h1>
+        <div class="event" id="setbutton">
+            <img id="red_light" src="../picture/red_light.png" style="height: 350px; width: 450px; z-index: 2;position: absolute;" alt="特效">
+            <img id="monster" src="" style="height: 350px; width: 450px;" alt="敵人">
+            <div id="info_box" class="info_box"></div>
+            
+            <br>
+            <p id="narrate1"></p>
+            <p id="narrate2"></p>
+            <input id="button1" type ="button" class="inOut" onclick="Battle()" value="戰鬥" style="margin-top: 15px;"></input>
+            <div class="div2">
+                <div id="hp_line"></div>
+                <p id="message"></p>
+                <button class="battle_button" id = 'attack' onclick="Attack()">攻擊</button>
+                <button class="battle_button" id = 'defense' onclick="Defense()">防禦</button>
+                <button class="battle_button" id = 'run_away' onclick="Run_away()">逃跑</button>
+            </div>
+        </div>
+        <button onclick="Remove()" style="position: absolute;bottom: 0;right: 0;">清除站存</button>
+    </div>
+    <div class="recond" id="recond"></div>
+    <div class="properties">
+        <p id="Hp">Hp:</p>
+        <p id="Atk">Atk:</p>
+        <p id="Def">Def:</p>
+        <p id="more">more</p>
+        <div id="more_box" class="info_box"></div>
+    </div>
+    <div class="props">
+        
+    </div>
+</body>
+</html>

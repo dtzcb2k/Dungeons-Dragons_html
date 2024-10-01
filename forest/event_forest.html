@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洞穴事件</title>
+    <link rel="stylesheet" href="../system.css">
+    <link rel="stylesheet" href="forest.css">
+    
+    <script src="../system.js"></script>
+    <script src="../event.js"></script>
+    <script src="../roll_dice.js"></script>
+    <!-- <script src="../Props.js"></script> -->
+    <script src="forest.js"></script>
+    <!-- 被引用的js要寫在前面，這樣才能調用 -->
+    
+</head>
+<body onload="Go_Event(2)">
+    <div class="dice">
+        <img  id="roll_dice1" src=""  alt="骰子">
+        <img  id="roll_dice2" src="" alt="骰子">
+    </div>
+    <audio id="bgm" autoplay loop>
+        <source src="../music/forest_music.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <h1 id="h1" style="color: white;"></h1>
+        <div class="event" id="setbutton">
+            <img id="img" src="" style="height: 350px; width: 400px;" alt="事件">
+            
+            <br>
+            <p id="event_message"></p>
+            <input id="button3" type ="button" style="display: none;"  onclick="javascript:location.href='forest.html'" value="繼續前行"></input>
+            <p></p>
+            <div class="div2">
+                <input id="button1" type ="button"  onclick="Agree()" value=""></input>
+                <input id="button2" type ="button"  onclick="Reject()" value=""></input>
+            </div>
+        </div>
+        <button onclick="Remove()" style="position: absolute;bottom: 0;right: 0;">清除站存</button>
+    </div>
+    <div class="recond" id="recond"></div>
+    <div class="properties">
+        <p id="Hp">Hp:</p>
+        <p id="Atk">Atk:</p>
+        <p id="Def">Def:</p>
+        <p id="more">more</p>
+        <div id="more_box" class="info_box"></div>
+    </div>
+    <div class="props">
+        
+    </div>
+</body>
+</html>

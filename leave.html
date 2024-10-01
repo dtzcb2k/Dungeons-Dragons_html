@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>離開</title>
+    <link rel="stylesheet" href="end.css">
+    <script src="system.js"></script>
+</head>
+<body onload="TheEnd()">
+    <audio id="bgm" autoplay loop>
+        <source src="../music/end.mp3" type="audio/mpeg">
+    </audio>
+    <div class="content" >
+        <div class="word_board">
+            <p id="total_damge"></p>
+            <p id="total_hpLoss"></p>
+            <div class="BDE" id="BDE"></div>
+            <div class="recond" id="recond"></div>
+            
+        </div>       
+        <button onclick="Out()">結束</button>
+    </div>
+</body>
+</html>

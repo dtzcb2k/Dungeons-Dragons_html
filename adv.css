@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    background-color: black;
+    /* background-image: url("picture/cave.jpg.jpg");
+    background-size: auto auto; */
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.inOutB {
+    margin-top: 20px;
+}
+.inOutB input{
+    width: 30%;
+    height: 70px;
+    font-size: 24px;
+}
+.goto {
+    display: inline-block;
+    position: relative;
+}
+.goto img {
+    width: 30%; /* 三個圖片連在一起 */
+    height: auto;
+}
+.p_word{
+    margin: 10px;
+}
+label{
+    margin: 40px;
+    color: white;
+}
