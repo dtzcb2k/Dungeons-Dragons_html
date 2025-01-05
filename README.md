@@ -1,0 +1,2 @@
+master 釋放單純使用html、css和javascript製作而成的
+react分支則是用react去製作而成的
